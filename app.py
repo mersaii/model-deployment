@@ -5,8 +5,8 @@ from sklearn.feature_extraction.text import CountVectorizer
 app = Flask(__name__)
 
 # Load the saved model
-model = joblib.load('C:/Users/mercy/IDS/model-deployment/sentiment_model.pkl')
-vectorizer = joblib.load('C:/Users/mercy/IDS/model-deployment/vectorizer.pkl')
+model = joblib.load('sentiment_model.pkl')
+vectorizer = joblib.load('vectorizer.pkl')
 
 # create a route that manages user request and does sentiment prediction
 @app.route('/predict', methods=['POST'])
